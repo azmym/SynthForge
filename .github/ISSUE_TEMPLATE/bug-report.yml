@@ -1,0 +1,51 @@
+name: Bug report
+description: Something is wrong with the marketplace itself (manifest, docs, workflows).
+title: "[Bug] <short summary>"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template only for issues with **SynthForge itself**.
+        For bugs in a specific plugin, file the issue on that plugin's own repo.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Run `/plugin marketplace add azmym/SynthForge`
+        2. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+
+  - type: input
+    id: cc-version
+    attributes:
+      label: Claude Code version
+      placeholder: e.g. 1.2.3
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: macOS 15, Ubuntu 24.04, Windows 11
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Logs, screenshots, links, etc.

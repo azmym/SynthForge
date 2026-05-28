@@ -1,0 +1,93 @@
+name: Propose a plugin
+description: Suggest a new plugin to be listed in the SynthForge marketplace.
+title: "[Plugin] <short name>: <one-line summary>"
+labels: ["plugin-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a plugin! Please fill out the fields below so a maintainer can review.
+
+  - type: input
+    id: name
+    attributes:
+      label: Plugin name
+      description: Lowercase, hyphenated, descriptive (e.g. `gemini-plugin`).
+      placeholder: my-cool-plugin
+    validations:
+      required: true
+
+  - type: input
+    id: repo
+    attributes:
+      label: GitHub repo URL
+      description: Must be public.
+      placeholder: https://github.com/your-org/my-cool-plugin
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: One-line summary
+      description: This becomes the `description` field in the marketplace manifest. Keep it under ~140 characters.
+      placeholder: Adds an X subagent and Y hooks for Z workflows.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: components
+    attributes:
+      label: What does the plugin ship?
+      options:
+        - label: Subagents
+        - label: Hooks
+        - label: Skills
+        - label: Slash commands
+        - label: MCP servers
+        - label: Other (explain below)
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why should a Claude Code user install this?
+      description: Help reviewers understand the audience and the value.
+    validations:
+      required: true
+
+  - type: input
+    id: license
+    attributes:
+      label: License
+      description: Must be OSI-approved (MIT, Apache-2.0, BSD, etc.).
+      placeholder: MIT
+    validations:
+      required: true
+
+  - type: input
+    id: release
+    attributes:
+      label: Latest tagged release
+      description: A tag like `v0.1.0` so users can pin and update cleanly.
+      placeholder: v0.1.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: tags
+    attributes:
+      label: Suggested tags / keywords
+      description: Comma-separated. Used for search and discovery.
+      placeholder: ai, validation, second-opinion
+
+  - type: checkboxes
+    id: confirms
+    attributes:
+      label: Confirmations
+      options:
+        - label: I have read the [Contributing guide](../blob/main/.github/CONTRIBUTING.md).
+          required: true
+        - label: The plugin repo has a README with install and usage instructions.
+          required: true
+        - label: The plugin contains no hardcoded secrets or undisclosed telemetry.
+          required: true
