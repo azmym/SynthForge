@@ -1,0 +1,20 @@
+{
+  "name": "synthforge",
+  "owner": {
+    "name": "azmym"
+  },
+  "description": "SynthForge: a Claude Code plugin marketplace for AI-augmented developer tooling",
+  "plugins": [
+    {
+      "name": "gemini-plugin",
+      "source": {
+        "source": "github",
+        "repo": "azmym/gemini-plugin"
+      },
+      "description": "Wraps gemini-mcp into a Claude Code plugin: validator/challenger/researcher/summarizer subagents, auto-trigger hooks, 8 skills covering text/image/video/music/TTS/research.",
+      "category": "ai-assistance",
+      "tags": ["gemini", "google-ai", "validation", "anti-hallucination", "second-opinion"],
+      "keywords": ["gemini", "mcp", "subagent", "hooks", "validator"]
+    }
+  ]
+}
