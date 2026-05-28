@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" width="720" height="240" role="img" aria-label="SynthForge">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="spark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="50%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="word" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#C7D2FE"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="720" height="240" rx="24" fill="url(#bg)"/>
+
+  <g transform="translate(60 60)" filter="url(#glow)">
+    <polygon points="60,0 110,40 95,120 25,120 10,40" fill="none" stroke="url(#spark)" stroke-width="4" stroke-linejoin="round"/>
+    <polygon points="60,30 90,52 82,100 38,100 30,52" fill="url(#spark)" opacity="0.18"/>
+    <path d="M60 28 L52 70 L68 70 L56 110 L78 60 L62 60 Z" fill="url(#spark)"/>
+  </g>
+
+  <g transform="translate(180 0)">
+    <text x="0" y="125" font-family="'SF Pro Display','Segoe UI',Inter,system-ui,sans-serif" font-size="68" font-weight="800" letter-spacing="-1.5" fill="url(#word)">
+      SynthForge
+    </text>
+    <text x="2" y="170" font-family="'SF Mono',ui-monospace,Menlo,Consolas,monospace" font-size="20" letter-spacing="2.5" fill="#A5B4FC">
+      CLAUDE CODE PLUGIN MARKETPLACE
+    </text>
+    <line x1="2" y1="190" x2="460" y2="190" stroke="#7C3AED" stroke-width="2" opacity="0.6"/>
+    <text x="2" y="215" font-family="'SF Pro Display','Segoe UI',Inter,system-ui,sans-serif" font-size="16" fill="#94A3B8">
+      AI-augmented developer tooling, curated.
+    </text>
+  </g>
+</svg>
